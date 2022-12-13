@@ -1,0 +1,25 @@
+const Page = require('./page')
+
+class droppable-page extends Page {
+    it('should demonstrate the dragAndDrop command', async () => {
+        const elem = await $('#draggable')
+        const target = await $('.ui-state-highlight')
+    }
+}
+
+function validateCSSValue(value) {
+    const validValues = ["blue"];
+
+    return validValues.includes(value);
+  }
+  
+  const dropBox = document.querySelector('#drop-here');
+  
+  function validateCSSValueOnDropBox(value) {
+    if (validateCSSValue(value)) {
+      dropBox.style.backgroundColor = value;
+      return true;
+    }
+    return false;
+  }
+
